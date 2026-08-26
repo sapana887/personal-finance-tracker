@@ -52,7 +52,7 @@ A personal finance tracking web application that I am building as part of my ful
 - Balance calculation
 - Financial status logic
 
-#### Current Example
+#### Current Example Result
 
 | Transaction | Amount | Type |
 |---|---:|---|
@@ -81,3 +81,31 @@ The goal is to gradually turn this project into a full-stack personal finance ap
 - APIs
 - Authentication
 - Database management
+
+## Day 3 — JavaScript Array Methods
+
+### What I Learned
+
+- forEach()
+- filter()
+- map()
+- Working with arrays of objects
+- Filtering transaction data
+- Transforming transaction data
+- Iterating through transaction data
+
+### Practice
+
+- Used forEach() to display transactions
+- Used filter() to find specific transactions
+- Used map() to extract transaction titles
+- Practiced filtering objects based on conditions
+
+### Project Updates
+
+- Filtered income transactions
+- Filtered expense transactions
+- Displayed income and expense details
+- Extracted transaction titles
+- Found large transactions
+- Found small transactions

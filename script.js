@@ -46,3 +46,51 @@ if (balance > 0) {
 } else {
   console.log("You need to reduce your expenses");
 }
+
+const incomeTransactions=transactions.filter((transaction)=>{
+  return transaction.type === "income";
+});
+console.log("Income Transactions:",incomeTransactions);
+
+const expenseTransactions=transactions.filter((transaction)=>{
+  return transaction.type === "expense";
+});
+console.log("Expense Transactions:", expenseTransactions);
+
+console.log("Income:");
+
+incomeTransactions.forEach((transaction) => {
+  console.log(transaction.title, "-", transaction.amount);
+});
+
+console.log("Expenses:");
+
+expenseTransactions.forEach((transaction) => {
+  console.log(transaction.title, "-", transaction.amount);
+});
+
+const transactionTitles = transactions.map((transaction) => {
+  return transaction.title;
+});
+
+console.log("Transaction Titles:", transactionTitles);
+
+const largeTransactions = transactions.filter((transaction) => {
+  return transaction.amount > 2000;
+});
+
+console.log("Large Transactions:");
+
+largeTransactions.forEach((transaction) => {
+  console.log(transaction.title, "-", transaction.amount);
+});
+
+const smallTransactions=transactions.filter((transaction)=>{
+  return transaction.type === "expense" &&transaction.amount < 5000;
+});
+
+console.log("Small Transactions:");
+
+smallTransactions.forEach((transaction)=>{
+  console.log(transaction.title);
+})

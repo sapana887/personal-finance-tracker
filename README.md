@@ -109,3 +109,33 @@ The goal is to gradually turn this project into a full-stack personal finance ap
 - Extracted transaction titles
 - Found large transactions
 - Found small transactions
+
+---
+
+## Day 4 — JavaScript Array Analysis
+
+### What I Learned
+
+- `reduce()`
+- `find()`
+- `some()`
+- `every()`
+- Combining `filter()` and `reduce()`
+- Analyzing transaction data
+
+### Practice
+
+- Calculated totals using `reduce()`
+- Found a specific transaction using `find()`
+- Checked whether a large expense exists using `some()`
+- Checked whether all expenses are below a limit using `every()`
+
+### Project Updates
+
+- Calculated total income using `reduce()`
+- Calculated total expenses using `reduce()`
+- Found specific transactions
+- Added large expense detection
+- Added expense limit checking
+- Added financial warning messages
+- Added a New Laptop transaction for testing

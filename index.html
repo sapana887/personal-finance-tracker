@@ -17,27 +17,43 @@
   <div class="container">
     <div class="finance-card">
       <h2>Total income</h2>
-      <p>Rs. 50,000</p>
+      <p id="total-income">Rs. 0</p>
     </div>
     <div class="finance-card">
       <h2>Total expense</h2>
-      <p>Rs. 20,000</p>
+      <p id="total-expense">Rs. 0</p>
     </div>
     <div class="finance-card">
       <h2>Balance</h2>
-      <p>Rs. 30,000</p>
+      <p id="balance">Rs. 0</p>
     </div>
   </div>
   <div class="box">
     <h2>Financial status</h2>
-    <p>✓ You have savings</p>
+    <p id="financial-status"></p>
   </div>
   <div class="summary">
     <h2>Today's Summary</h2>
-    <p>Income: Rs. 50,000</p>
-    <p>Expenses: Rs. 20,000</p>
-    <p>Remaining: Rs. 30,000 </p>
+    <p id="summary-income"></p>
+    <p id="summary-expense"></p>
+    <p id="summary-balance"></p>
   </div>
+  <div class= "transaction-form">
+    <h2>Add Transaction</h2>
+    <input id="transaction-title" type="text" placeholder="Transaction title">
+    <input id="transaction-amount" type="number" placeholder="Amount">
+    <select id = "transaction-type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <button id="add-transaction">Add Transaction</button>
+  </div>
+  <div class="transactions">
+    <h2>Transactions</h2>
+    <div id="transaction-list"></div>
+  </div>
+  <button id="show-message">Click Financial Status</button>
+  <p id="status-message"></p>
   </main>
   <script src="script.js"></script>
 </body>

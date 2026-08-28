@@ -139,3 +139,97 @@ The goal is to gradually turn this project into a full-stack personal finance ap
 - Added expense limit checking
 - Added financial warning messages
 - Added a New Laptop transaction for testing
+
+---
+
+## Day 5 — Transaction Management
+
+### What I Learned
+
+- DOM manipulation
+
+- getElementById()
+
+- addEventListener()
+
+- Reading values from input fields
+
+- Creating HTML elements with JavaScript
+
+- Adding elements to the DOM
+
+- Input validation
+
+- Updating the UI dynamically
+
+### Built
+
+- Transaction input form
+
+- Income and expense selection
+
+- Add Transaction functionality
+
+- Dynamic transaction list
+
+- Delete Transaction functionality
+
+- Automatic total updates
+
+- Automatic balance updates
+
+- Financial status updates
+
+### Project Updates
+
+- Added new transactions dynamically
+
+- Added income transactions
+
+- Added expense transactions
+
+- Displayed transactions on the page
+
+- Added Delete button for each transaction
+
+- Updated totals after adding a transaction
+
+- Updated totals after deleting a transaction
+
+- Added validation for empty titles
+
+- Added validation for invalid amounts
+
+---
+
+## Day 6 — Local Storage
+
+### What I Learned
+
+- localStorage
+
+- localStorage.setItem()
+
+- localStorage.getItem()
+
+- JSON.stringify()
+
+- JSON.parse()
+
+- Saving and retrieving data from the browser
+
+### Project Updates
+
+- Added Local Storage to the Finance Tracker
+
+- Transactions are saved when added
+
+- Transactions remain after refreshing the page
+
+- Transactions are loaded when the application starts
+
+- Deleted transactions are removed from Local Storage
+
+- Totals are recalculated from saved transactions
+
+- Transaction list is restored from saved data

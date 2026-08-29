@@ -1,4 +1,6 @@
 let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+let editingIndex = null;
+
 let totalExpense = 0;
 let totalIncome = 0;
 
@@ -63,22 +65,34 @@ function calculateTotals() {
   }
 }
 
-addTransactionButton.addEventListener("click",()=>{
+addTransactionButton.addEventListener("click", () => {
   const title = transactionTitle.value;
   const amount = Number(transactionAmount.value);
   const type = transactionType.value;
 
   if (title.trim() === "" || amount <= 0) {
-  alert("Please enter a valid title and amount.");
-  return;
-}
-  
+    alert("Please enter a valid title and amount.");
+    return;
+  }
+
+  if (editingIndex !== null) {
+  transactions[editingIndex] = {
+    title,
+    amount,
+    type,
+  };
+
+  editingIndex = null;
+  addTransactionButton.textContent = "Add Transaction";
+} else {
   const transaction = {
     title,
     amount,
-    type
+    type,
   };
+
   transactions.push(transaction);
+}
   localStorage.setItem("transactions", JSON.stringify(transactions));
 
   calculateTotals();
@@ -93,9 +107,25 @@ function displayTransactions() {
   transactionList.innerHTML = "";
 
   transactions.forEach((transaction, index) => {
-    const transactionItem = document.createElement("p");
+    const transactionItem = document.createElement("div");
+    transactionItem.classList.add("transaction-item");
 
-    transactionItem.textContent = `${transaction.title} - Rs. ${transaction.amount} - ${transaction.type}`;
+    if (transaction.type === "income") {
+      transactionItem.textContent = `${transaction.title} - + Rs. ${transaction.amount}`;
+    } else {
+      transactionItem.textContent = `${transaction.title} - - Rs. ${transaction.amount}`;
+    }
+
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+
+    editButton.addEventListener("click", () => {
+      transactionTitle.value = transaction.title;transactionAmount.value = transaction.amount;
+      transactionType.value = transaction.type;
+
+      editingIndex = index;
+      addTransactionButton.textContent = "Update Transaction";
+});
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
@@ -108,8 +138,9 @@ function displayTransactions() {
       displayTransactions();
     });
 
+    transactionItem.appendChild(editButton);
+    transactionItem.appendChild(deleteButton);
     transactionList.appendChild(transactionItem);
-    transactionList.appendChild(deleteButton);
   });
 }
 calculateTotals();

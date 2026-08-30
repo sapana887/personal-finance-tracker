@@ -145,3 +145,14 @@ function displayTransactions() {
 }
 calculateTotals();
 displayTransactions();
+
+const clearTransactionsButton = document.getElementById("clear-transactions");
+
+clearTransactionsButton.addEventListener("click", () => {
+  transactions = [];
+
+  localStorage.removeItem("transactions");
+
+  calculateTotals();
+  displayTransactions();
+});

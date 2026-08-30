@@ -233,3 +233,29 @@ The goal is to gradually turn this project into a full-stack personal finance ap
 - Totals are recalculated from saved transactions
 
 - Transaction list is restored from saved data
+
+## Day 7 — Local Storage & Final Improvements
+
+### What I Learned
+
+* localStorage
+* localStorage.setItem()
+* localStorage.getItem()
+* localStorage.removeItem()
+* JSON.stringify()
+* JSON.parse()
+* Saving and retrieving data from the browser
+* Keeping data after page refresh
+
+### Project Updates
+
+* Added Local Storage to the Finance Tracker
+* Transactions are saved when added
+* Transactions remain after refreshing the page
+* Transactions are loaded when the application starts
+* Deleted transactions are removed from Local Storage
+* Totals are recalculated from saved transactions
+* Transaction list is restored from saved data
+* Added Clear All Transactions functionality
+* Added Financial Status functionality
+* Improved the transaction button layout

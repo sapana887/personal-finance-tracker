@@ -49,3 +49,7 @@ nav {
   margin: 0;
   margin-left: 10px;
 }
+#clear-transactions,
+#show-message {
+  margin-top: 20px;
+}
